@@ -1,0 +1,123 @@
+<?php
+
+namespace Faker\Provider\id_ID;
+
+class User extends \Faker\Provider\Base
+{
+    /**
+     * @var array some username
+     */
+    protected static $username = [
+        'Aspect',
+        'Kraken',
+        'Bender',
+        'Lynch',
+        'Big Papa',
+        'Mad Dog',
+        'Bowser',
+        'Doyle',
+        'Bruise',
+        'Psycho',
+        'Cannon',
+        'Ranger',
+        'Clink',
+        'Ratchet',
+        'Cobra',
+        'Reaper',
+        'Colt',
+        'Rigs',
+        'Crank',
+        'Ripley',
+        'Creep',
+        'Roadkill',
+        'Daemon',
+        'Ronin',
+        'Decay',
+        'Rubble',
+        'Diablo',
+        'Sasquatch',
+        'Doom',
+        'Scar',
+        'Dracula',
+        'Shiver',
+        'Dragon',
+        'Skinner',
+        'Fender',
+        'Skull Crusher',
+        'Fester',
+        'Slasher',
+        'Fisheye',
+        'Steelshot',
+        'Flack',
+        'Surge',
+        'Gargoyle',
+        'Sythe',
+        'Grave',
+        'Trip',
+        'Gunner',
+        'Trooper',
+        'Hash',
+        'Tweek',
+        'Hashtag',
+        'Vein',
+        'Indominus',
+        'Void',
+        'Ironclad',
+        'Wardon',
+        'Killer',
+        'Wraith',
+        'Knuckles',
+        'Zero',
+        'Steel',
+        'Kevlar',
+        'Lightning',
+        'Tito',
+        'Bullet-Proof',
+        'Fire-Bred',
+        'Titanium',
+        'Hurricane',
+        'Ironsides',
+        'Iron-Cut',
+        'Tempest',
+        'Iron Heart',
+        'Steel Forge',
+        'Pursuit',
+        'Steel Foil',
+        'Sick Rebellious Names',
+        'Upsurge',
+        'Uprising',
+        'Overthrow',
+        'Breaker',
+        'Sabotage',
+        'Dissent',
+        'Subversion',
+        'Rebellion',
+        'Insurgent',
+        'Accidental Genius',
+        'Acid Gosling',
+        'Admiral Tot',
+        'AgentHercules',
+        'Airport Hobo',
+        'Alley Frog',
+        'Alpha',
+        'AlphaReturns',
+        'Angel',
+        'AngelsCreed',
+        'Arsenic Coo',
+        'Atomic Blastoid',
+        'Automatic Slicer',
+        'Baby Brown',
+        'Back Bett',
+    ];
+
+    /**
+     * Return sword for user
+     *
+     * @access public
+     * @return string username
+     */
+    public static function username()
+    {
+        return static::randomElement(static::$username);
+    }
+}

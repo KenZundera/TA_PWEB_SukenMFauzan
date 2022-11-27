@@ -1,0 +1,93 @@
+ <script>
+    document.addEventListener("visibilitychange", function () {
+        if (document.visibilityState === "visible") {
+            document.title = "Bot Epic RPG";
+            $("#favicon").attr("href", "../../assets/img/icon.webp");
+        } else {
+            document.title = "Welcome to Epic RPG";
+            $("#favicon").attr("href", "../../assets/img/icon.webp");
+        }
+    });
+
+    
+    // get first word from id quest same tr and put to id quest-detail
+    $(document).ready(function () {
+        $(".quest").each(function () {
+            var quest = $(this).text();
+            var questDetail = quest.split(" ");
+
+            if (questDetail[0] == "Hunt") {
+                $(this).closest("tr").find(".quest-detail").text("Kill <?= $faker->numberBetween(
+                    1,
+                    5
+                ) ?> <?= $faker->randomElement(
+     $array = [
+         'Zombie',
+         'Cecaelia',
+         'Wolf',
+         'Scaled Kid Dragon',
+         'MUTANT WATER BOTTLE',
+         'Bee Horde',
+         'Giant',
+         'Wild Sharpener',
+         '-',
+     ]
+ ) ?>");
+            } else if (questDetail[0] == "Adventure") {
+                $(this).closest("tr").find(".quest-detail").text("Do an Adventure command");
+            } else if (questDetail[0] == "Crafting") {
+                $(this).closest("tr").find(".quest-detail").text("Craft <?= $faker->numberBetween(
+                    1,
+                    8
+                ) ?> <?= $faker->randomElement(
+     $array = [
+         'Log',
+         'Fish',
+         'Fruit',
+         'Drop-Item',
+         'Potion',
+         'Cookie',
+         'Lootbox',
+         'Seed',
+         'Epic Item',
+     ]
+ ) ?>");
+            } else if (questDetail[0] == "Arena") {
+                $(this).closest("tr").find(".quest-detail").text("Join an Arena");
+            } else if (questDetail[0] == "Gambling") {
+                $(this).closest("tr").find(".quest-detail").text("Get at least <?= $faker->numberBetween(
+                    1000,
+                    250000
+                ) ?> with gambling commands");
+            } else if (questDetail[0] == "Miniboss") {
+                $(this).closest("tr").find(".quest-detail").text("Summon and kill a miniboss");
+            } else if (questDetail[0] == "Trading") {
+                $(this).closest("tr").find(".quest-detail").text("Do a trade with the EPIC NPC");
+            } else if (questDetail[0] == "Guild") {
+                $(this).closest("tr").find(".quest-detail").text("Do a guild raid");
+            } else if (questDetail[0] == "Cooking") {
+                $(this).closest("tr").find(".quest-detail").text("Cook <?= $faker->numberBetween(
+                    1,
+                    5
+                ) ?> <?= $faker->randomElement(
+     $array = [
+         'Baked Fish',
+         'Coin Sandwich',
+         'Hairn',
+         'Fruit Salad',
+         'Apple Juice',
+         'Carrot Bread',
+         'Orange Juice',
+         'Banana Pickaxe',
+         'Heavy Apple',
+         'Filled Lootbox',
+         'Fruit Ice Cream',
+         'Coin Sandwich',
+     ]
+ ) ?>");
+            } else {
+                $(this).closest("tr").find(".quest-detail").text("No Quest");
+            }
+        });
+    });
+    </script>

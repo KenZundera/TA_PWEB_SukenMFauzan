@@ -1,0 +1,262 @@
+/*?======================== Form Start =========================*/
+html,
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-transform: capitalize;
+  text-decoration: none;
+  outline: none;
+  transition: all 0.3s;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  overflow-x: hidden;
+  background-color: #2e2e2e;
+  font-size: 17px;
+  max-width: 100%;
+  height: 100%;
+}
+
+body.hidden {
+  overflow: hidden;
+}
+
+html::-webkit-scrollbar {
+  width: 0.6rem;
+}
+
+html::-webkit-scrollbar-track {
+  background: #202020;
+}
+
+html::-webkit-scrollbar-thumb {
+  border-radius: 5px;
+  background: rgba(17, 119, 255, 0.5);
+}
+
+html::-webkit-scrollbar-thumb:hover {
+  border-radius: 5px;
+  background: #0077ff;
+}
+
+#keyword {
+  background-color: #2d3135;
+  color: #fff;
+  border: 1px solid rgb(207, 207, 207);
+  border-radius: 0.375rem;
+  padding: 6px 12px 6px 12px;
+  width: 300px;
+  margin: 0px 4px 0px 16px;
+  font-size: 1rem;
+  font-weight: normal;
+  line-height: 1.5;
+  transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+}
+
+#keyword::placeholder {
+  color: #fff;
+  font-family: "AbeeZee";
+}
+
+#keyword:focus {
+  border-color: #86b7fe;
+  outline: 0;
+  box-shadow: 0 0 0 0.25rem rgb(13 110 253 / 25%);
+}
+
+label {
+  color: #fff;
+  font-size: 1rem;
+  font-weight: normal;
+  line-height: 1.5;
+  margin: 0px 4px 0px 0px;
+}
+
+input[type="text"] {
+  background-color: #2d3135;
+  color: #fff;
+  border: 1px solid rgb(207, 207, 207);
+  border-radius: 0.375rem;
+  padding: 6px 12px 6px 12px;
+  width: 100%;
+  margin: 0px 4px 10px 0px;
+  font-size: 1rem;
+  font-weight: normal;
+  line-height: 1.5;
+  transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+}
+
+input[type="password"] {
+  background-color: #2d3135;
+  color: #fff;
+  border: 1px solid rgb(207, 207, 207);
+  border-radius: 0.375rem;
+  padding: 6px 12px 6px 12px;
+  width: 100%;
+  margin: 0px 4px 10px 0px;
+  font-size: 1rem;
+  font-weight: normal;
+  line-height: 1.5;
+  transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+}
+
+input[type="number"] {
+  background-color: #2d3135;
+  color: #fff;
+  border: 1px solid rgb(207, 207, 207);
+  border-radius: 0.375rem;
+  padding: 6px 12px 6px 12px;
+  width: 100%;
+  margin: 0px 4px 10px 0px;
+  font-size: 1rem;
+  font-weight: normal;
+  line-height: 1.5;
+  transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+}
+
+input[type="email"] {
+  background-color: #2d3135;
+  color: #fff;
+  border: 1px solid rgb(207, 207, 207);
+  border-radius: 0.375rem;
+  padding: 6px 12px 6px 12px;
+  width: 100%;
+  margin: 0px 4px 10px 0px;
+  font-size: 1rem;
+  font-weight: normal;
+  line-height: 1.5;
+  transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+}
+
+input[type="date"] {
+  position: relative;
+  background-color: #2d3135;
+  color: #fff;
+  border: 1px solid rgb(207, 207, 207);
+  border-radius: 0.375rem;
+  padding: 6px 12px 6px 12px;
+  width: 100%;
+  margin: 0px 4px 10px 0px;
+  font-size: 1rem;
+  font-weight: normal;
+  line-height: 1.5;
+  transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+}
+
+input[type="date"]::-webkit-calendar-picker-indicator {
+  color: #fff;
+  background: none;
+  z-index: 1;
+}
+
+input[type="date"]:before {
+  color: #fff;
+  background: none;
+  display: block;
+  font-family: "FontAwesome";
+  content: "\f073";
+  /* This is the calendar icon in FontAwesome */
+  position: absolute;
+  top: 6px;
+  right: 15px;
+}
+
+select {
+  background-color: #2d3135;
+  color: #fff;
+  border: 1px solid rgb(207, 207, 207);
+  border-radius: 0.375rem;
+  padding: 6px 12px 6px 12px;
+  width: 100%;
+  margin: 0px 4px 10px 0px;
+  font-size: 1rem;
+  font-weight: normal;
+  line-height: 1.5;
+  transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+}
+
+.tbl-tambah {
+  background-color: #0d6efd;
+  border: none;
+  color: white;
+  padding: 10px 12px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 2px 2px 20px 2px;
+  cursor: pointer;
+  border-radius: 0.375rem;
+}
+
+.tbl-edit {
+  background-color: #e7e303;
+  border: none;
+  color: rgb(0, 0, 0);
+  padding: 8px 12px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 8px 2px;
+  cursor: pointer;
+  border-radius: 0.375rem;
+}
+
+.tbl-hapus {
+  background-color: #dc3545;
+  border: none;
+  color: rgb(255, 255, 255);
+  padding: 8px 12px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 8px 2px;
+  cursor: pointer;
+  border-radius: 0.375rem;
+}
+
+.tbl-submit {
+  background-color: #198754;
+  border: none;
+  color: rgb(255, 255, 255);
+  padding: 8px 12px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 8px 2px;
+  cursor: pointer;
+  border-radius: 0.375rem;
+}
+/*?======================== Form End =========================*/
+
+.flex-footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.flex-footer .footer {
+  width: 100%;
+  margin: 5px auto;
+  text-align: center;
+  font-weight: bold;
+}
+
+.flex-footer .footer p {
+  color: #ffffff;
+  margin-top: 1.25rem;
+}
+
+.flex-footer .footer a {
+  color: #0d6efd;
+}
+
+.flex-footer .footer a:hover {
+  color: #0855c9;
+}
