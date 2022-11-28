@@ -20,7 +20,15 @@
     <!--? Font Awesome -->
     <script src="https://kit.fontawesome.com/92333b2848.js" crossorigin="anonymous"></script>
   </head>
-  <body>
+  <body class="hidden">
+    <div class="preloader" id="preloader">
+      <div class="loader" id="loader"></div>
+    </div>
+
+    <audio hiddens id="audio"> 
+        <source src="../assets/audio/epic-song.mp3" type="audio/mpeg">
+    </audio>
+
     <nav class="navbar">
       <a href="/" class="logo">
         <img src="../assets/img/erpg.webp" alt="logo" style="width: 40px; height: 40px" />
@@ -187,6 +195,10 @@
     </section>
 
 
-    </style>
+      <!--? jQuery CDN -->
+      <script src="../assets/js/jquery-3.6.1.min.js"></script>
+
+      <!-- My JS -->
+      <script src="../assets/js/script.js"></script>
   </body>
 </html>

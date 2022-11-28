@@ -45,6 +45,10 @@ session_start();
       <div class="loader" id="loader"></div>
     </div>
 
+    <audio hidden id="audio"> 
+        <source src="assets/audio/epic-song.mp3" type="audio/mpeg">
+    </audio>
+
     <!--?======================== Navbar start ========================= -->
     <nav class="navbar">
       <a href="/" class="logo">
@@ -235,5 +239,6 @@ session_start();
     <script src="assets/js/script.js"></script>
 
     <script src="assets/js/bootstrap.min.js"></script>
+    
   </body>
 </html>

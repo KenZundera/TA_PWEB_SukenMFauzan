@@ -148,10 +148,6 @@ $quest = $conn->query(
       <div class="loader" id="loader"></div>
     </div>
 
-    <audio hiddens> 
-        <source src="assets/audio/omaga.mp3" type="audio/mpeg">
-    </audio>
-
     <!--?======================== Navbar start ========================= -->
     <nav class="navbar">
       <a href="../../index.php" class="logo">

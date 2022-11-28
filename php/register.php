@@ -157,12 +157,14 @@ if (isset($_POST['register'])) {
         }
     </style>
 </head>
-<body>
-    <!-- <div class="flex-header">
-        <div class="image">
-            <img src="../assets/img/login.jpg" alt="Login">
-        </div>
-    </div> -->
+<body class="hidden">
+    <div class="preloader" id="preloader">
+      <div class="loader" id="loader"></div>
+    </div>
+
+    <audio hidden id="audio"> 
+        <source src="../assets/audio/epic-song.mp3" type="audio/mpeg">
+    </audio>
     <form action="" method="post">
         <h1>Halaman Registrasi</h1>
         <ul>

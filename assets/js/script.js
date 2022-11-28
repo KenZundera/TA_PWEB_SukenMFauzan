@@ -1,11 +1,3 @@
-// script hamburger untuk mobile responsive
-const menuToggle = document.querySelector(".menu-toggle input");
-const nav = document.querySelector("nav ul");
-
-menuToggle.addEventListener("click", function () {
-  nav.classList.toggle("slide");
-});
-
 //script toggle navbar aktif
 $(document).on("click", "ul li", function () {
   $(this).addClass("active").siblings().removeClass("active");
@@ -126,3 +118,35 @@ window.addEventListener("load", function () {
   }, preloadDelay);
 });
 
+window.addEventListener("load", function () {
+  // load music   
+  // get base url
+  let base_url = window.location.origin;
+
+  // music with base url
+  let music = base_url + "/TA_PWEB_SukenMFauzan/assets/audio/epic-song.mp3";
+
+  let audio = new Audio(music);
+  audio.src = music;
+  audio.volume = 0.2;
+  audio.autoplay = true
+  audio.loop = true
+  // store audio current time in localStorage
+  setInterval(() => {
+    localStorage.setItem("audio_time", audio.currentTime);
+  }, 100);
+  // play audio
+  // play audio when page is loaded
+  if("audio_time" in localStorage) {
+    audio.currentTime = localStorage.getItem("audio_time");
+  } 
+
+  // if audio_pause in localStorage is true
+  if(localStorage.getItem("audio_pause") == "true") {
+    audio.pause();
+  } else {
+  audio.play();
+  }
+});
+
+// localStorage.clear();

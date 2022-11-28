@@ -2,18 +2,7 @@
 ob_start();
 session_start();
 
-include 'functions.php';
-
-// Cara Gwehj iyakah? astaga ngerinya
-// if (isset($_POST['login'])) {
-//     if (login($_POST) > 0) {
-//         echo "<script>
-//                 document.location.href = '../index.php';
-//               </script>";
-//     } else {
-//         echo mysqli_error($conn);
-//     }
-// }
+require 'functions.php';
 
 // Cara Bu Nanda
 if (isset($_POST['login'])) {
@@ -40,11 +29,7 @@ if (isset($_POST['login'])) {
             setcookie('password', $_POST['password'], time() + 120);
             setcookie('success', true, time() + 10);
             // header('Location: ../index.php');
-        } else {
-            header('location: login.php?gagal');
         }
-    } else {
-        header('location: login.php?gagal');
     }
 }
 ?>
@@ -201,12 +186,15 @@ if (isset($_POST['login'])) {
     </style>
 </head>
 
-<body>
-    <!-- <div class="flex-header">
-        <div class="image">
-            <img src="../assets/img/login.jpg" alt="Login">
-        </div>
-    </div> -->
+<body class="hidden">
+    <div class="preloader" id="preloader">
+      <div class="loader" id="loader"></div>
+    </div>
+
+    <audio hidden id="audio"> 
+        <source src="../assets/audio/epic-song.mp3" type="audio/mpeg">
+    </audio>
+
     <form action="" method="post">
         <h1>Halaman Login</h1>
         <?php if (isset($_GET['gagal'])) { ?>
@@ -250,22 +238,11 @@ if (isset($_POST['login'])) {
         </ul>
     </form> 
 
-    <!-- Link Jquery -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script>
+    <!--? jQuery CDN -->
+    <script src="../assets/js/jquery-3.6.1.min.js"></script>
 
-        <!-- Bootstrap JS Dropdown Navbar -->
-        <script src="../assets/js/dropdown.js"></script>
-
-        <!-- Tilt JS -->
-        <script src="../assets/js/vanilla-tilt.js"></script>
-
-        <!--? jQuery CDN -->
-        <script src="../assets/js/jquery-3.6.1.min.js"></script>
-
-        <!-- My JS -->
-        <script src="../assets/js/script.js"></script>
-
-        <script src="../assets/js/bootstrap.min.js"></script>
+    <!-- My JS -->
+    <script src="../assets/js/script.js"></script>
 
     <script>
         // if isset $_SESSION['succes_regis'] 
